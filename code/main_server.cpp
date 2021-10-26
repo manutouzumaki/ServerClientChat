@@ -111,11 +111,11 @@ int main(void)
     I < Memory.ClientCount;
     ++I)
     {
-        WaitForSingleObject(RecvThreadHandles[I], INFINITE);
+        //WaitForSingleObject(RecvThreadHandles[I], INFINITE);
         CloseHandle(RecvThreadHandles[I]);
     }
 
-    WaitForSingleObject(ListenerThreadHandle, INFINITE);
+    //WaitForSingleObject(ListenerThreadHandle, INFINITE);
     CloseHandle(ListenerThreadHandle);
     WaitForSingleObject(Mutex, INFINITE);
     CloseHandle(Mutex);

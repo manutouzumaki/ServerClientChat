@@ -98,6 +98,10 @@ int WINAPI WinMain(HINSTANCE Instance, HINSTANCE PrevInstance, LPSTR CmdLine, in
         TranslateMessage(&Message);
         DispatchMessage(&Message);
     }
+    
+    Memory.AppRunnign = false;
+    CloseHandle(RecvThreadHandle);
+
     return(Message.wParam); 
 }
 
